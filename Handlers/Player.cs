@@ -28,7 +28,7 @@ namespace Subclass.Handlers
 
 		public void OnSpawning(SpawningEventArgs ev)
 		{
-			Timing.CallDelayed(Subclass.Instance.CommonUtilsEnabled ? 2f : 0.1f, () =>
+			Timing.CallDelayed(Subclass.Instance.CustomPluginsEnabled ? 2f : 0.1f, () =>
 			{
 				if (!Subclass.Instance.RealisticSizesEnabled) ev.Player.Scale = new Vector3(1, 1, 1);
 				try
@@ -67,7 +67,7 @@ namespace Subclass.Handlers
 
 		public void OnChangingRole(ChangingRoleEventArgs ev)
 		{
-			Timing.CallDelayed(Subclass.Instance.CommonUtilsEnabled ? 2f : 0.1f, () =>
+			Timing.CallDelayed(Subclass.Instance.CustomPluginsEnabled ? 2f : 0.1f, () =>
 			{
 				if (!ev.IsEscaped) TrackingAndMethods.RemoveAndAddRoles(ev.Player);
 			});
@@ -310,7 +310,7 @@ namespace Subclass.Handlers
 					return;
 				}
 			}
-			Timing.CallDelayed(Subclass.Instance.CommonUtilsEnabled ? 2f : 0.1f, () =>
+			Timing.CallDelayed(Subclass.Instance.CustomPluginsEnabled ? 2f : 0.1f, () =>
 			{
 				if (TrackingAndMethods.PlayersWithSubclasses.ContainsKey(ev.Player))
 				{

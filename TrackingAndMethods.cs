@@ -1363,7 +1363,7 @@ namespace Subclass
 				Player p = spectators.ElementAt(rnd.Next(spectators.Count()));
 				p.SetRole(savedRole);
 
-				Timing.CallDelayed(Subclass.Instance.CommonUtilsEnabled ? 2.5f : 0.5f, () =>
+				Timing.CallDelayed(Subclass.Instance.CustomPluginsEnabled ? 2.5f : 0.5f, () =>
 				{
 					p.Health *= subClass.FloatOptions.ContainsKey("MultiplyHealthPercent") ? subClass.FloatOptions["MultiplyHealthPercent"] / 100 : .25f;
 					Timing.KillCoroutines(Coroutines[coroutineIndex]);

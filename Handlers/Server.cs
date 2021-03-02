@@ -22,7 +22,7 @@ namespace Subclass.Handlers
 		public void OnRoundStarted()
 		{
 			TrackingAndMethods.RoundStartedAt = Time.time;
-			Timing.CallDelayed(Subclass.Instance.CommonUtilsEnabled ? 2f : 0.1f, () =>
+			Timing.CallDelayed(Subclass.Instance.CustomPluginsEnabled ? 2f : 0.1f, () =>
 			{
 				Log.Debug("Round started!", Subclass.Instance.Config.Debug);
 				foreach (EPlayer player in EPlayer.List)

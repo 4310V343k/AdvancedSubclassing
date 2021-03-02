@@ -27,7 +27,7 @@ namespace Subclass
 		public override string Name { get; } = "Subclass";
 		public override string Author { get; } = "Steven4547466";
 		public override Version Version { get; } = new Version(1, 4, 0);
-		public override Version RequiredExiledVersion { get; } = new Version(2, 1, 28);
+		public override Version RequiredExiledVersion { get; } = new Version(2, 4, 3);
 		public override string Prefix { get; } = "Subclass";
 
 		public Handlers.Player player { get; set; }
@@ -39,7 +39,7 @@ namespace Subclass
 		public Dictionary<RoleType, Dictionary<SubClass, float>> ClassesWeighted = null;
 
 		public bool Scp035Enabled = Loader.Plugins.Any(p => p.Name == "scp035" && p.Config.IsEnabled);
-		public bool CommonUtilsEnabled = Loader.Plugins.Any(p => p.Name == "Common Utilities" && p.Config.IsEnabled);
+		public bool CustomPluginsEnabled = Loader.Plugins.Any(p => p.Name == "Common Utilities" && p.Config.IsEnabled) || Loader.Plugins.Any(p => p.Name == "Custom Escapes" && p.Config.IsEnabled);
 		public bool RealisticSizesEnabled = Loader.Plugins.Any(p => p.Name == "RealisticSizes" && p.Config.IsEnabled);
 		public bool Scp008XEnabled = Loader.Plugins.Any(p => p.Name == "Scp008X" && p.Config.IsEnabled);
 

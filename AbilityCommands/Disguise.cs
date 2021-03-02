@@ -140,7 +140,7 @@ namespace Subclass.AbilityCommands
 
 				player.SetRole(trueRole, true);
 
-				Timing.CallDelayed(Subclass.Instance.CommonUtilsEnabled ? 2f : 0.1f, () =>
+				Timing.CallDelayed(Subclass.Instance.CustomPluginsEnabled ? 2f : 0.1f, () =>
 				{
 					Player scp035 = null;
 					if (Subclass.Instance.Scp035Enabled)
